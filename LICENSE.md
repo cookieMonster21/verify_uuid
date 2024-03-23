@@ -1,6 +1,6 @@
 MIT License
 
-Copyright () [2024] [Lisa Ulrich]
+Copyright (c) [2024] [Lisa Ulbrich]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

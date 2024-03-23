@@ -31,7 +31,9 @@ pip3 install -r requirements.txt
 python3 main.py -h
 ```
 
-A detailed documentation is written with Sphinx, a build version available under `docs/build/html/index.html`.
+A detailed documentation is build with Sphinx, a build version available under `docs/build/html/index.html`. Just 
+download the repository and open the file in a browser.
+Build your own version in `docs`folder with `make html`.
 
 ----------
 
