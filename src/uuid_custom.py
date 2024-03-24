@@ -51,7 +51,8 @@ def check_why_uuid_is_not_valid(uuid_value):
     # invalid variant
     variant = get_uuid_variant(uuid_value)
     if not re.match("^[0-9a-dA-D]$", variant):
-        return "Incorrect variant, " + variant
+        return "Incorrect variant, " + variant + (". Further details about variants can be found in the documentation "
+                                                  "under Explanation.")
     return "Reason not found"
 
 
@@ -77,7 +78,15 @@ def get_uuid_version(uuid_value):
     if re.match("^[0-5]$", version):
         return version
     else:
-        return "Incorrect Version, only Version 1-5 is valid. Version of given UUID: " + version
+        return "Incorrect Version, only Version 1-5 is valid. Version of given UUID: " + version + (".\n There is a "
+                                                                                                    "proposal for the "
+                                                                                                    "implementation "
+                                                                                                    "of versions 6-8, "
+                                                                                                    "but these have "
+                                                                                                    "not yet been "
+                                                                                                    "officially "
+                                                                                                    "published as a"
+                                                                                                    "standard.")
 
 
 def check_single_uuid(uuid_value):

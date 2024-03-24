@@ -22,7 +22,7 @@ def test_get_uuid_version_4():
 
 def test_get_uuid_version_wrong_uuid():
     uuid_value = "b30eb6bd-c89a-683d-ba4a-0e6764a8385f"
-    assert uuid_custom.get_uuid_version(uuid_value) == "Incorrect Version, only Version 1-5 is valid. Version of given UUID: 6"
+    assert uuid_custom.get_uuid_version(uuid_value) == "Incorrect Version, only Version 1-5 is valid. Version of given UUID: 6.\n There is a proposal for the implementation of versions 6-8, but these have not yet been officially published as astandard."
 
 
 # validate_uuid_with_pattern
@@ -59,9 +59,9 @@ def test_check_why_uuid_is_not_valid_patter_8_4_4_4_12():
 
 def test_check_why_uuid_is_not_valid_invalid_version():
     uuid_value = "b30eb6bd-c89a-683d-ba4a-0e6764a8385f"
-    assert uuid_custom.check_why_uuid_is_not_valid(uuid_value) == "Incorrect Version, only Version 1-5 is valid. Version of given UUID: 6"
+    assert uuid_custom.check_why_uuid_is_not_valid(uuid_value) == "Incorrect Version, only Version 1-5 is valid. Version of given UUID: 6.\n There is a proposal for the implementation of versions 6-8, but these have not yet been officially published as astandard."
 
 
 def test_check_why_uuid_is_not_valid_invalid_variant():
     uuid_value = "b30eb6bd-c89a-383d-fa4a-0e6764a8385f"
-    assert uuid_custom.check_why_uuid_is_not_valid(uuid_value) == "Incorrect variant, reserved for future definition"
+    assert uuid_custom.check_why_uuid_is_not_valid(uuid_value) == "Incorrect variant, reserved for future definition. Further details about variants can be found in the documentation under Explanation."

@@ -35,7 +35,78 @@
   <section id="explanation">
 <h1>Explanation<a class="headerlink" href="#explanation" title="Link to this heading">¶</a></h1>
 <!--- Referenzierung an anderen Positionen möglich, wird nicht angezeigt --->
-<span class="target" id="id1"></span></section>
+<section id="aim-of-uuids">
+<span id="id1"></span><h2>Aim of UUIDs<a class="headerlink" href="#aim-of-uuids" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>To ensure that information is reliably unique</p></li>
+<li><p>Used as identification number</p></li>
+<li><p>is considered universally unique - worldwide</p></li>
+</ul>
+</section>
+<section id="general-information">
+<h2>General Information<a class="headerlink" href="#general-information" title="Link to this heading">¶</a></h2>
+<ul>
+<li><p><strong>U</strong>niversally <strong>U</strong>nique <strong>Id</strong>entifier (UUID)</p></li>
+<li><p>often also referred as <strong>GUID</strong> (<strong>G</strong>lobally <strong>U</strong>nique <strong>Id</strong>entifier)</p></li>
+<li><p>Defined in the standard <a class="reference external" href="https://datatracker.ietf.org/doc/html/rfc4122">RFC4122</a></p></li>
+<li><p>5 versions have been defined</p></li>
+<li><p>Format</p>
+<ul class="simple">
+<li><p>8-4-4-4-12 <code class="docutils literal notranslate"><span class="pre">xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</span></code></p></li>
+<li><p>each <code class="docutils literal notranslate"><span class="pre">x</span></code> is represented by a character from the hexadecimal system: <code class="docutils literal notranslate"><span class="pre">0-9</span></code>and <code class="docutils literal notranslate"><span class="pre">A-F</span></code>.</p></li>
+<li><p>Capitalization is not relevant.</p></li>
+</ul>
+</li>
+<li><p>Version and Variant can be identified by a character on a specific position</p>
+<ul class="simple">
+<li><p>Version (M)</p></li>
+<li><p>Variant (N)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx</span></code></p></li>
+</ul>
+</li>
+<li><p>Variants</p>
+<ul class="simple">
+<li><p>RFC4122 UUID and Microsoft GUID are synonyms, same principle</p></li>
+<li><p>Overview:</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Hex Digest</p></th>
+<th class="head"><p>Variant</p></th>
+<th class="head"><p>Return Value from Software</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0-7</p></td>
+<td><p>Backwards compatible with Apollo Network Computing, no longer relevant</p></td>
+<td><p>reserved for NCS compatibility</p></td>
+</tr>
+<tr class="row-odd"><td><p>8-b</p></td>
+<td><p>RFC 4122/DCE 1.1; ISO/IEC 11578:1996</p></td>
+<td><p>specified in RFC 4122</p></td>
+</tr>
+<tr class="row-even"><td><p>c-d</p></td>
+<td><p>Microsoft GUID</p></td>
+<td><p>reserved for Microsoft compatibility</p></td>
+</tr>
+<tr class="row-odd"><td><p>e</p></td>
+<td><p>future versions</p></td>
+<td><p>reserved for future definition</p></td>
+</tr>
+<tr class="row-even"><td><p>f</p></td>
+<td><p>unknown, not valid</p></td>
+<td><p>reserved for future definition</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<section id="description-of-the-versions">
+<h3>Description of the versions<a class="headerlink" href="#description-of-the-versions" title="Link to this heading">¶</a></h3>
+<p>Following</p>
+</section>
+</section>
+</section>
 
 
           </div>
