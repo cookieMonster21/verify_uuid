@@ -4,6 +4,14 @@ tests package
 Submodules
 ----------
 
+tests.test\_arguments module
+----------------------------
+
+.. automodule:: tests.test_arguments
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 tests.test\_uuid\_custom module
 -------------------------------
 
