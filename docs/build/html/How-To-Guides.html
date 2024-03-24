@@ -37,11 +37,33 @@
 <!--- Referenzierung an anderen Positionen möglich, wird nicht angezeigt --->
 <section id="example-uuids">
 <span id="howto"></span><h2>Example UUIDs<a class="headerlink" href="#example-uuids" title="Link to this heading">¶</a></h2>
-<p>In all How To Guides the following UUID is used as example: 3ff971b1-8b16-4ede-90b0-2d3ac5a9f8d3</p>
+<p>In all How To Guides the following UUIDs are used as example</p>
+<ul class="simple">
+<li><p>77ec999b-d287-4268-9915-81d6c79a70ed</p></li>
+<li><p>8c7b779c-c7f4-4fc1-8bc1-20a4b34d9028</p></li>
+</ul>
 </section>
 <section id="how-do-i-verify-a-uuid">
 <h2>How do I verify a UUID?<a class="headerlink" href="#how-do-i-verify-a-uuid" title="Link to this heading">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="n">uuid</span><span class="o">=</span><span class="mi">3</span><span class="n">ff971b1</span><span class="o">-</span><span class="mi">8</span><span class="n">b16</span><span class="o">-</span><span class="mi">4</span><span class="n">ede</span><span class="o">-</span><span class="mi">90</span><span class="n">b0</span><span class="o">-</span><span class="mi">2</span><span class="n">d3ac5a9f8d3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">uuid</span><span class="o">=</span><span class="mi">77</span><span class="n">ec999b</span><span class="o">-</span><span class="n">d287</span><span class="o">-</span><span class="mi">4268</span><span class="o">-</span><span class="mi">9915</span><span class="o">-</span><span class="mi">81</span><span class="n">d6c79a70ed</span>
+</pre></div>
+</div>
+</section>
+<section id="how-do-i-verify-several-uuids-at-once">
+<h2>How do I verify several UUIDs at once?<a class="headerlink" href="#how-do-i-verify-several-uuids-at-once" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Create a text file, e.g. <code class="docutils literal notranslate"><span class="pre">uuid_list.txt</span></code> and paste all UUIDs you want to verify line per line to the file.
+Example:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">77</span><span class="n">ec999b</span><span class="o">-</span><span class="n">d287</span><span class="o">-</span><span class="mi">4268</span><span class="o">-</span><span class="mi">9915</span><span class="o">-</span><span class="mi">81</span><span class="n">d6c79a70ed</span>
+<span class="mi">8</span><span class="n">c7b779c</span><span class="o">-</span><span class="n">c7f4</span><span class="o">-</span><span class="mi">4</span><span class="n">fc1</span><span class="o">-</span><span class="mi">8</span><span class="n">bc1</span><span class="o">-</span><span class="mi">20</span><span class="n">a4b34d9028</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Save the created file in the <code class="docutils literal notranslate"><span class="pre">path-to-tool/verify_uuid/src/</span></code> folder.</p></li>
+<li><p>Execute command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="nb">list</span><span class="o">=</span><span class="n">uuid_list</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </section>

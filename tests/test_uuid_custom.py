@@ -1,4 +1,3 @@
-import pytest
 import src.uuid_custom as uuid_custom
 
 

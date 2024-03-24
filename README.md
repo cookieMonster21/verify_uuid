@@ -25,7 +25,7 @@ If the UUID is incorrect, the cause of the error is determined.
 
 A brief overview of usage
 ```
-git clone ...
+git clone https://github.com/lisa-2905/verify_uuid.git
 cd verify_uuid/src
 pip3 install -r requirements.txt
 python3 main.py -h

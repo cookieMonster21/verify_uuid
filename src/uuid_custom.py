@@ -13,6 +13,8 @@ def is_uuid_valid(uuid_value):
     Format: 8-4-4-4-12 (xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx), not case-sensitive
     M: version, only 1-5 available
     N: variant, only 0-9a-d available
+
+    :return: Boolean Value
     """
     uuid_pattern = "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-5][0-9a-fA-F]{3}-[0-9a-dA-D][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
     if re.match(uuid_pattern, uuid_value):
@@ -77,3 +79,26 @@ def get_uuid_version(uuid_value):
     else:
         return "Incorrect Version, only Version 1-5 is valid. Version of given UUID: " + version
 
+
+def check_single_uuid(uuid_value):
+    """
+    This method checks if the given uuid_value is valid. In addition, information is extracted from the UUID for
+    valid values and the reason is identified for invalid values.
+
+    :param uuid_value: UUID
+    :return: Results are printed in the Command Line.
+    """
+    # check if uuid is valid
+    is_valid = is_uuid_valid(uuid_value)
+    print("UUID " + uuid_value + " is " + "valid" if is_valid else "not valid")
+
+    # if uuid is valid get further information else check reason
+    if is_valid:
+        # variant
+        variant = get_uuid_variant(uuid_value)
+        print("Variant of the UUID: " + variant)
+        # version
+        version = get_uuid_version(uuid_value)
+        print("Version: " + version)
+    else:
+        print(check_why_uuid_is_not_valid(uuid_value))

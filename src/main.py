@@ -1,28 +1,20 @@
 """
-Main Class: Starting program with following path:
-    1. Validate UUID
-        if valid: 1a. Print Variant and Version
-        if not valid: 1b. Identify Reason why UUID is not valid
+Main Class: Start program
 """
 import arguments
 import uuid_custom
 
 
 if __name__ == '__main__':
-    # uuid
+    # single uuid
     uuid_value = arguments.get_uuid()
+    if uuid_value is not None:
+        uuid_custom.check_single_uuid(uuid_value)
 
-    # check if uuid is valid
-    is_valid = uuid_custom.is_uuid_valid(uuid_value)
-    print("UUID is " + "valid" if is_valid else "not valid")
+    # list of uuids
+    uuid_list = arguments.get_list_of_uuids()
+    if uuid_list is not None:
+        for uuid_value_from_list in uuid_list:
+            uuid_custom.check_single_uuid(uuid_value_from_list)
+            print("-------------------")
 
-    # if uuid is valid get further information else check reason
-    if is_valid:
-        # variant
-        variant = uuid_custom.get_uuid_variant(uuid_value)
-        print("Variant of the UUID: " + variant)
-        # version
-        version = uuid_custom.get_uuid_version(uuid_value)
-        print("Version: " + version)
-    else:
-        print(uuid_custom.check_why_uuid_is_not_valid(uuid_value))

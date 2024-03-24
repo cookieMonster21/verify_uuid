@@ -41,37 +41,62 @@
 <span id="src-arguments-module"></span><h2>src.arguments module<a class="headerlink" href="#module-src.arguments" title="Link to this heading">¶</a></h2>
 <p>Handle arguments from command line</p>
 <dl class="py function">
+<dt class="sig sig-object py" id="src.arguments.get_list_of_uuids">
+<span class="sig-prename descclassname"><span class="pre">src.arguments.</span></span><span class="sig-name descname"><span class="pre">get_list_of_uuids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.arguments.get_list_of_uuids" title="Link to this definition">¶</a></dt>
+<dd><p>With the argument “–list” the path to a file with a list of uuids is given. Here the file is opened and all
+uuids are returned in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of UUIDs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="src.arguments.get_uuid">
 <span class="sig-prename descclassname"><span class="pre">src.arguments.</span></span><span class="sig-name descname"><span class="pre">get_uuid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.arguments.get_uuid" title="Link to this definition">¶</a></dt>
-<dd><p>Returns UUID from argument list
-:return: UUID</p>
+<dd><p>Returns UUID from argument list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>UUID</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="src.arguments.raed_arguments">
 <span class="sig-prename descclassname"><span class="pre">src.arguments.</span></span><span class="sig-name descname"><span class="pre">raed_arguments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.arguments.raed_arguments" title="Link to this definition">¶</a></dt>
-<dd><p>Used Argument parser. Detailed overview with -h.
-:return: parsed arguments</p>
+<dd><p>Used Argument parser. Detailed overview with -h.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>parsed arguments</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
 <section id="module-src.main">
 <span id="src-main-module"></span><h2>src.main module<a class="headerlink" href="#module-src.main" title="Link to this heading">¶</a></h2>
-<dl class="simple">
-<dt>Main Class: Starting program with following path:</dt><dd><ol class="arabic simple">
-<li><dl class="simple">
-<dt>Validate UUID</dt><dd><p>if valid: 1a. Print Variant and Version
-if not valid: 1b. Identify Reason why UUID is not valid</p>
-</dd>
-</dl>
-</li>
-</ol>
-</dd>
-</dl>
+<p>Main Class: Start program</p>
 </section>
 <section id="module-src.uuid_custom">
 <span id="src-uuid-custom-module"></span><h2>src.uuid_custom module<a class="headerlink" href="#module-src.uuid_custom" title="Link to this heading">¶</a></h2>
 <p>Handle UUIDs.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.uuid_custom.check_single_uuid">
+<span class="sig-prename descclassname"><span class="pre">src.uuid_custom.</span></span><span class="sig-name descname"><span class="pre">check_single_uuid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.uuid_custom.check_single_uuid" title="Link to this definition">¶</a></dt>
+<dd><p>This method checks if the given uuid_value is valid. In addition, information is extracted from the UUID for
+valid values and the reason is identified for invalid values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>uuid_value</strong> – UUID</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Results are printed in the Command Line.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="src.uuid_custom.check_why_uuid_is_not_valid">
 <span class="sig-prename descclassname"><span class="pre">src.uuid_custom.</span></span><span class="sig-name descname"><span class="pre">check_why_uuid_is_not_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uuid_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.uuid_custom.check_why_uuid_is_not_valid" title="Link to this definition">¶</a></dt>
@@ -127,6 +152,11 @@ if not valid: 1b. Identify Reason why UUID is not valid</p>
 <p>Format: 8-4-4-4-12 (xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx), not case-sensitive
 M: version, only 1-5 available
 N: variant, only 0-9a-d available</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Boolean Value</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
